@@ -50,7 +50,7 @@ ProtobufNetPrimitives is a library to transfer basic data types with [protobuf-n
 |`ulong`|`DtoUlong`|-|
 |`ushort`|`DtoUshort`|-|
 
-No-Nullable and Nullable types are supported (Different sub-namespaces).
+Non-Nullable and Nullable types are supported (Different sub-namespaces).
 
 # Why you can't use generics here
 

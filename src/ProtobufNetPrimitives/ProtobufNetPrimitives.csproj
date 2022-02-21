@@ -10,13 +10,13 @@
     <Authors>SeppPenner</Authors>
     <Company>Hämmer Electronics</Company>
     <Copyright>Copyright © Hämmer Electronics</Copyright>
-    <Description>ProtobufNetPrimitives is a library to calculate mathematic functions with the decimal data type.</Description>
-    <PackageTags>c# csharp math mathematics decimal decimalmath</PackageTags>
+    <Description>ProtobufNetPrimitives is a library to transfer basic data types with protobuf-net.Grpc.</Description>
+    <PackageTags>c# csharp protobuf protobufnet datatypes datatype basic</PackageTags>
     <PackageProjectUrl>https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.ProtobufNetPrimitives/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SeppPenner/ProtobufNetPrimitives</RepositoryUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Version 1.1.5.0 (2021-11-10): Fixed build to include Net6.0.</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1.0.0.0 (2022-02-21): 1.0 release.</PackageReleaseNotes>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>

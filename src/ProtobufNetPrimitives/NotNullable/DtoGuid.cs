@@ -26,7 +26,7 @@ public class DtoGuid
     /// Gets or sets the data.
     /// </summary>
     [ProtoMember(1)]
-    public string Data { get; set; }
+    public string Data { get; set; } = string.Empty;
 
     /// <summary>
     /// Gets the Guid.
