@@ -16,7 +16,7 @@
     <RepositoryUrl>https://github.com/SeppPenner/ProtobufNetPrimitives</RepositoryUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Version 1.0.0.0 (2022-02-21): 1.0 release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1.0.1.0 (2022-10-30): Updated nuget packages.</PackageReleaseNotes>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
