@@ -16,7 +16,7 @@
     <RepositoryUrl>https://github.com/SeppPenner/ProtobufNetPrimitives</RepositoryUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Version 1.0.2.0 (2022-11-10): Updated NuGet packages, added support for Net7.0, removed support for Net5.0.</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1.0.3.0 (2023-04-07): Removed NetCore3.1, Updated NuGet packages.</PackageReleaseNotes>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
