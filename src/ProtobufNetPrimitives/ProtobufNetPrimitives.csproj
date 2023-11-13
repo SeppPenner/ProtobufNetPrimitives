@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <AssemblyName>ProtobufNetPrimitives</AssemblyName>
         <RootNamespace>ProtobufNetPrimitives</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -26,6 +26,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <NoWarn>NU1803</NoWarn>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
@@ -34,7 +35,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-        <PackageReference Include="protobuf-net.BuildTools" Version="3.2.30">
+        <PackageReference Include="protobuf-net.BuildTools" Version="3.2.33">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
