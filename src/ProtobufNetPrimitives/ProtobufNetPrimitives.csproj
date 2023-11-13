@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/SeppPenner/ProtobufNetPrimitives</RepositoryUrl>
         <PackageIcon>Icon.png</PackageIcon>
         <RepositoryType>Github</RepositoryType>
-        <PackageReleaseNotes>Version 1.0.4.0 (2023-11-11): Updated NuGet packages.</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.0.5.0 (2023-11-13): Updated NuGet packages, removed support for netstandard.</PackageReleaseNotes>
         <PackageLicenseFile>License.txt</PackageLicenseFile>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
