@@ -11,7 +11,7 @@ ProtobufNetPrimitives is a library to transfer basic data types with [protobuf-n
 [![Nuget](https://img.shields.io/badge/ProtobufNetPrimitives-Nuget-brightgreen.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.ProtobufNetPrimitives/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.ProtobufNetPrimitives.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.ProtobufNetPrimitives/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/ProtobufNetPrimitives/badge.svg)](https://snyk.io/test/github/SeppPenner/ProtobufNetPrimitives)
-[![Gitter](https://badges.gitter.im/ProtobufNetPrimitives/community.svg)](https://gitter.im/ProtobufNetPrimitives/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://img.shields.io/matrix/ProtobufNetPrimitives_community%3Agitter.im?server_fqdn=matrix.org)](https://matrix.to/#/#ProtobufNetPrimitives_community:gitter.im)
 [![Blogger](https://img.shields.io/badge/Follow_me_on-blogger-orange)](https://franzhuber23.blogspot.de/)
 [![Patreon](https://img.shields.io/badge/Patreon-F96854?logo=patreon&logoColor=white)](https://patreon.com/SeppPennerOpenSourceDevelopment)
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?logo=paypal&logoColor=white)](https://paypal.me/th070795)
