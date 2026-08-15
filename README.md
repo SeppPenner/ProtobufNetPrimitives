@@ -18,7 +18,7 @@ ProtobufNetPrimitives is a library to transfer basic data types with [protobuf-n
 
 ## Available for
 * Net 8.0
-* Net 9.0
+* Net 10.0
 
 ## Net Core and Net Framework latest and LTS versions
 * https://dotnet.microsoft.com/download/dotnet
@@ -38,8 +38,8 @@ ProtobufNetPrimitives is a library to transfer basic data types with [protobuf-n
 |`Guid`|`DtoGuid`|The value is internally stored as string, use the property `Uuid` to get the correct value.|
 |`int`|`DtoInt`|-|
 |`long`|`DtoLong`|-|
-|`nint`|`DtoNint`|-|
-|`nuint`|`DtoNuint`|-|
+|`nint`|`DtoNint`|The value is internally stored as long, use the property `Nint` to get the correct value.|
+|`nuint`|`DtoNuint`|The value is internally stored as ulong, use the property `Nuint` to get the correct value.|
 |`sbyte`|`DtoSbyte`|-|
 |`short`|`DtoShort`|-|
 |`string`|`DtoString`|-|

@@ -1,7 +1,7 @@
 Change history
 --------------
 
-* **Version 1.0.8.0 (2024-11-24)** : Removed support for Net6.0, added support for Net9.0, updated NuGet packages.
+* **Version 1.0.9.0 (2026-08-15)** : Removed support for Net9.0 as it is out of support, added support for Net10.0, updated NuGet packages, added unit tests, fixed DtoNint and DtoNuint (protobuf-net has no serializer for nint and nuint, the values now travel as long and ulong), fixed the nullable DateTimeOffset property of the non nullable DtoDateTimeOffset.
 * **Version 1.0.7.0 (2024-05-16)** : Removed support for Net7.0.
 * **Version 1.0.6.0 (2023-12-07)** : Updated NuGet packages, added support for Net8.0.
 * **Version 1.0.5.0 (2023-11-13)** : Updated NuGet packages, removed support for netstandard.
