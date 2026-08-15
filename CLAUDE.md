@@ -14,7 +14,7 @@ One solution `src/ProtobufNetPrimitives.sln` with two projects:
 - `src/ProtobufNetPrimitives/ProtobufNetPrimitives.csproj`, the library, `GeneratePackageOnBuild`, multi
   targeted to `net8.0;net10.0`.
 - `src/ProtobufNetPrimitives.Tests/ProtobufNetPrimitives.Tests.csproj`, MSTest, single target `net10.0`, added
-  in version 1.0.9.0.
+  in version 1.1.0.0.
 
 Layout inside `src/ProtobufNetPrimitives`:
 
@@ -57,7 +57,7 @@ dotnet build src/ProtobufNetPrimitives.sln -c Release
 dotnet test src/ProtobufNetPrimitives.sln
 ```
 
-- The library multi targets `net8.0;net10.0`. Net 9.0 was dropped in version 1.0.9.0 because it is out of
+- The library multi targets `net8.0;net10.0`. Net 9.0 was dropped in version 1.1.0.0 because it is out of
   support. The test project targets `net10.0` only, there is no Net 8.0 runtime on this machine.
 - `src/Directory.Build.props` sets nothing but `GenerateDocumentationFile`. Everything else lives in the two
   `.csproj` files.
@@ -69,8 +69,8 @@ dotnet test src/ProtobufNetPrimitives.sln
 - `GeneratePackageOnBuild` is on, so **every** build writes a `.nupkg` and a `.snupkg` into
   `src/ProtobufNetPrimitives/bin/<config>`, a plain `dotnet test` included. Nothing is uploaded by that,
   pushing is `BuildAndPushPackage.bat` and nothing else.
-- Versions come from GitVersion.MsBuild out of the git tags, for example `1.0.9-3` for the third commit after
-  tag `1.0.8`. Never edit a version property or an assembly version by hand.
+- Versions come from GitVersion.MsBuild out of the git tags, for example `1.1.1-1` for the first commit after
+  tag `1.1.0`. Never edit a version property or an assembly version by hand.
 - Restore needs nuget.org. If a private feed is configured globally on the machine and answers 404 for public
   packages, restore fails with `NU1301`. Then build with an explicit source:
   `dotnet build src/ProtobufNetPrimitives.sln --source https://api.nuget.org/v3/index.json`.
@@ -107,7 +107,7 @@ Do not silently "clean up" these, they are existing behaviour:
 - **`nint` and `nuint` are stored as `long` and `ulong`.** protobuf-net has no serializer for `IntPtr` and
   `UIntPtr`, a `Data` property of that type throws `InvalidOperationException: No serializer defined for type:
   System.IntPtr` on the first serialization. Up to version 1.0.8.0 both classes had exactly that, so they never
-  worked. Since 1.0.9.0 the value travels as `long` respectively `ulong` and the `[ProtoIgnore]` properties
+  worked. Since 1.1.0.0 the value travels as `long` respectively `ulong` and the `[ProtoIgnore]` properties
   `Nint` and `Nuint` cast it back, the same trick the date types use. Note that this narrows on a 32 bit
   process, a value that does not fit into `nint` there is truncated.
 - **`protobuf-net.BuildTools` does not catch that.** The analyzer is referenced and the build was warning free
@@ -142,20 +142,20 @@ Do not silently "clean up" these, they are existing behaviour:
 
 1. Make the change.
 2. Add an entry at the top of `Changelog.md` in the existing format:
-   `* **Version 1.0.9.0 (2026-08-15)** : Short description.`
+   `* **Version 1.1.0.0 (2026-08-15)** : Short description.`
 3. Copy the same text into `<PackageReleaseNotes>` in `ProtobufNetPrimitives.csproj`, in the format
-   `Version 1.0.9.0 (2026-08-15): Short description.` Both places are maintained by hand and drifted apart
+   `Version 1.1.0.0 (2026-08-15): Short description.` Both places are maintained by hand and drifted apart
    before.
 4. If the target frameworks changed, update the "Available for" list in `README.md`.
 5. Commit that.
-6. Tag the commit with the plain version number, no `v` prefix (`1.0.9`, `1.0.8`, ...). The existing tags are
+6. Tag the commit with the plain version number, no `v` prefix (`1.1.0`, `1.0.8`, ...). The existing tags are
    lightweight tags, create new ones the same way. The tag has to exist **before** the package is built,
-   otherwise GitVersion burns a prerelease version like `1.0.9-3` into the `.nupkg`.
+   otherwise GitVersion burns a prerelease version like `1.1.1-1` into the `.nupkg`.
 7. Push the commits and the tag.
 8. Run `BuildAndPushPackage.bat` to build and upload. It needs `NUGET_API_KEY` and `GITHUB_API_KEY` in the
    environment and a nuget source named `github`. Uploading to nuget.org cannot be undone, only delisted.
 
-The version in the `Changelog.md` has four parts (`1.0.9.0`), the tag has three (`1.0.9`).
+The version in the `Changelog.md` has four parts (`1.1.0.0`), the tag has three (`1.1.0`).
 
 ## Git
 
