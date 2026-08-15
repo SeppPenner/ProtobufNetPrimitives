@@ -23,8 +23,14 @@ public class DtoNint
     }
 
     /// <summary>
-    /// Gets or sets the data.
+    /// Gets or sets the data. protobuf-net has no serializer for nint, so the value travels as long.
     /// </summary>
     [ProtoMember(1)]
-    public nint? Data { get; set; }
+    public long? Data { get; set; }
+
+    /// <summary>
+    /// Gets the nint.
+    /// </summary>
+    [ProtoIgnore]
+    public nint? Nint => this.Data is null ? null : (nint)this.Data.Value;
 }

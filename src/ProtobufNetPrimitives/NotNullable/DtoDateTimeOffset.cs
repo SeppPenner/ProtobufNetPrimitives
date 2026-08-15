@@ -32,5 +32,5 @@ public class DtoDateTimeOffset
     /// Gets the date time offset as UTC timestamp.
     /// </summary>
     [ProtoIgnore]
-    public DateTimeOffset? DateTimeOffset => new(this.Data, TimeSpan.FromHours(0));
+    public DateTimeOffset DateTimeOffset => new(this.Data, TimeSpan.FromHours(0));
 }

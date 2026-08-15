@@ -23,8 +23,14 @@ public class DtoNuint
     }
 
     /// <summary>
-    /// Gets or sets the data.
+    /// Gets or sets the data. protobuf-net has no serializer for nuint, so the value travels as ulong.
     /// </summary>
     [ProtoMember(1)]
-    public nuint Data { get; set; }
+    public ulong Data { get; set; }
+
+    /// <summary>
+    /// Gets the nuint.
+    /// </summary>
+    [ProtoIgnore]
+    public nuint Nuint => (nuint)this.Data;
 }
