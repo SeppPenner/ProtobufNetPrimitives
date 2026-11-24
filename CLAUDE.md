@@ -192,8 +192,8 @@ belong to every version, none of these steps is optional and none of them waits 
 
 The version in the `Changelog.md` has four parts (`1.1.0.0`), the tag has three (`1.1.0`).
 
-nuget.org holds every tagged version from 1.0.0 to 1.1.0. On 2026-11-24 no tag had a GitHub release yet, and
-GitHub Packages held only 1.0.0, 1.0.6, 1.0.7, 1.0.8 and 1.1.0, the older history there is incomplete.
+nuget.org and GitHub Packages hold every tagged version from 1.0.0 to 1.1.1, and every tag has a GitHub
+release. The missing versions on GitHub Packages and the releases were added on 2026-11-24.
 
 ## Git
 
