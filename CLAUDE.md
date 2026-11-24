@@ -12,8 +12,8 @@ per type. The library is published as the NuGet package
 One solution `src/ProtobufNetPrimitives.sln` with two projects:
 
 - `src/ProtobufNetPrimitives/ProtobufNetPrimitives.csproj`, the library, `GeneratePackageOnBuild`, multi
-  targeted to `net8.0;net10.0`.
-- `src/ProtobufNetPrimitives.Tests/ProtobufNetPrimitives.Tests.csproj`, MSTest, single target `net10.0`, added
+  targeted to `net10.0;net11.0`.
+- `src/ProtobufNetPrimitives.Tests/ProtobufNetPrimitives.Tests.csproj`, MSTest, single target `net11.0`, added
   in version 1.1.0.0.
 
 Layout inside `src/ProtobufNetPrimitives`:
@@ -57,8 +57,9 @@ dotnet build src/ProtobufNetPrimitives.sln -c Release
 dotnet test src/ProtobufNetPrimitives.sln
 ```
 
-- The library multi targets `net8.0;net10.0`. Net 9.0 was dropped in version 1.1.0.0 because it is out of
-  support. The test project targets `net10.0` only, there is no Net 8.0 runtime on this machine.
+- The library multi targets `net10.0;net11.0`, so building needs the .NET 11 SDK. Net 9.0 was dropped in
+  version 1.1.0.0 because it is out of support, Net 8.0 after 1.1.0.0. The test project targets `net11.0`
+  only, keep it on the newest framework the library targets.
 - `src/Directory.Build.props` sets nothing but `GenerateDocumentationFile`. Everything else lives in the two
   `.csproj` files.
 - `TreatWarningsAsErrors` is enabled in both projects, so every warning breaks the build, NuGet warnings
